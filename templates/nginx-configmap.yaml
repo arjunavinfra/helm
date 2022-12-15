@@ -18,7 +18,6 @@ data:
     </html>
 kind: ConfigMap
 metadata:
-  name: nginx-cm
+  name: {{ .Release.Name }}-helm-module
   labels:
-    app.kubernetes.io/name: nginx-app
-    app.kubernetes.io/instance: nginx
+{{- include "labels" . | indent 2 }}
