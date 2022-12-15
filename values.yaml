@@ -4,3 +4,5 @@ serviceAccount:
 service:
   type: ClusterIP
   port: 80
+
+sleepyTime: 10
