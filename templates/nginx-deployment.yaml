@@ -17,7 +17,7 @@ spec:
         app.kubernetes.io/name: nginx-app
         app.kubernetes.io/instance: nginx
     spec:
-      serviceAccountName: nginx-sa
+      serviceAccountName: {{ if .Values.serviceAccount.create }} nginx-sa {{ else }} default {{ end }}
       volumes:
       - name: nginx-volume
         configMap:

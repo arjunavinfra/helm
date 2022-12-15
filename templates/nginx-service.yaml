@@ -2,11 +2,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{- .Release.Name }}-helm-module
+  name: {{ .Release.Name }}-helm-module
 spec:
-  type:  {{- .Values.service.type }} 
+  type: {{ .Values.service.type }}
   ports:
-    - port:  {{- .Values.service.port }}
+    - port: {{ .Values.service.port }}
       targetPort: http
       protocol: TCP
       name: http
