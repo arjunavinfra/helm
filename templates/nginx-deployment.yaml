@@ -5,6 +5,7 @@ metadata:
   name: {{ .Release.Name }}-helm-module
   labels:
 {{- include "labels" . | indent 2 }}
+  namespace: default
 spec:
   replicas: 1
   selector:
